@@ -1,0 +1,16 @@
+.logo {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+
+    &__left-line {
+        position: absolute;
+        top: 13px;
+        left: 10px;
+    }
+    &__right-line {
+        position: absolute;
+        top: 10px;
+        left: 25px;
+    }
+}
