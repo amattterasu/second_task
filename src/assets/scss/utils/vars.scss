@@ -1,15 +1,25 @@
 // Font
-$mainFont                : 'Montserrat', Helvetica, Arial, sans-serif;
+$mainFont                : 'Montserrat-Regular', Helvetica, Arial, sans-serif;
+$boldFontM               : 'Montserrat-Bold';
 $boldFont                : 'Quicksand-Bold';
 // $lightFont               : 'Quicksand-Light';
 $regularFont             : 'Quicksand-Regular';
 // $mediumFont             : 'Quicksand-Medium';
 
-// Size
-$mainFontColor           : #101010;
-$mainFontSize            : 19px;
+//Color & Type
+$dark-shade-100          : #1F2041;
+$dark-shade-75           : rgba(31, 32, 65, 0.75);
+$dark-shade-50           : rgba(31, 32, 65, 0.5);
+$dark-shade-25           : rgba(31, 32, 65, 0.25);
+$dark-shade-5            : rgba(31, 32, 65, 0.05);
+$purple                  : #BC9CFF;
+$green                   : #6FCF97;
+
+// size of fonts
+$mainFontColor           :$dark-shade-75; //#101010;
+$mainFontSize            : 14px;
 $mainFontWeight          : 400;
-//$mainLineHeight          : 1.4;
+$mainLineHeight          : 24px;
 
 $desktopWidth            : 1280px;
 $smDesktopWidth          : 980px;
@@ -25,14 +35,6 @@ $danger-color            : #fc5c65;
 $warning-color           : #fed330;
 $light-color             : #999999;
 
-//Color & Type
-$dark-shade-100          : #1F2041;
-$dark-shade-75           : rgba(31, 32, 65, 0.75);
-$dark-shade-50           : rgba(31, 32, 65, 0.5);
-$dark-shade-25           : rgba(31, 32, 65, 0.25);
-$dark-shade-5            : rgba(31, 32, 65, 0.05);
-$purple                  : #BC9CFF;
-$green                   : #6FCF97;
 
 // Neutral Color
 $neutral-primary         : #303133;
