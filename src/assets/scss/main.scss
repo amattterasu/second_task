@@ -7,7 +7,6 @@
 html {
   //line-height: $mainLineHeight;
   font-size: $mainFontSize;
-  color: $mainFontColor;
   height: 100%;
   @media screen and (max-width: $desktopWidth) {
     font-size: 16px;
@@ -21,6 +20,8 @@ html {
 }
 
 body {
+  line-height: $mainLineHeight;
+  color: $mainFontColor;
   margin: 0;
   padding: 0;
   font-family: $mainFont;
@@ -33,6 +34,19 @@ body {
 *, *:before, *:after { box-sizing: border-box; }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+h1 {
+  @include template-h(24px, 30px, $dark-shade-100, $boldFont)
+}
+
+h2 {
+  @include template-h(19px, 24px, $dark-shade-100, $boldFont)
+}
+
+h3 {
+  @include template-h(12px, 15px, $dark-shade-100, $boldFontM);
+  text-transform: uppercase;
+}
 
 a { text-decoration: none; }
 
@@ -56,12 +70,12 @@ ul, li {
 //   }
 // }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  min-height: 100vh;
-}
+// .wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   margin: 0 auto;
+//   min-height: 100vh;
+// }
 
 .content-wrapper {
   display: flex;
