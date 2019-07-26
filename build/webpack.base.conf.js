@@ -8,10 +8,11 @@ const { VueLoaderPlugin } = require('vue-loader')
 const PATHS = {
     src: path.join(__dirname, '../src'),
     dist: path.join(__dirname, '../dist'),
-    assets: 'assets/'
+    assets: 'assets/',
+    components: 'components/'
 }
 
-const PAGES_DIR = `${PATHS.src}/pug/pages/`
+const PAGES_DIR = `${PATHS.src}/pages/`
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
@@ -120,7 +121,7 @@ module.exports = {
             filename: `${PATHS.assets}css/[name].[hash].css`,
         }),
         new CopyWebpackPlugin([
-            { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
+            { from: `${PATHS.src}/${PATHS.assets}/img`, to: `${PATHS.assets}img` },
             { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
             { from: `${PATHS.src}/static`, to: '' },
         ]),
