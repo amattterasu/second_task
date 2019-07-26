@@ -1,0 +1,24 @@
+@import 'colors.block/colors.scss';
+@import 'types.block/types.scss';
+@import '../headerUI/headerUI.scss';
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item:first-child{
+        margin-left: 150px;
+        margin-top: 67px;
+    }
+    .item:last-child{
+        margin-top: 67px;
+        margin-right: 192px;
+    }
+
+    @media screen and (max-width: 1011px) {
+        .item:first-child, .item:last-child {
+            margin: 50px 50px;
+        }
+    }
+}

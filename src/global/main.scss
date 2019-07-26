@@ -8,18 +8,20 @@ html {
   //line-height: $mainLineHeight;
   font-size: $mainFontSize;
   height: 100%;
-  @media screen and (max-width: $desktopWidth) {
-    font-size: 16px;
-  }
-  @media screen and (max-width: $tableWidth) {
-    font-size: 15px;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    font-size: 14px;
-  }
+  // @media screen and (max-width: $desktopWidth) {
+  //   font-size: 16px;
+  // }
+  // @media screen and (max-width: $tableWidth) {
+  //   font-size: 15px;
+  // }
+  // @media screen and (max-width: $phoneWidth) {
+  //   font-size: 14px;
+  // }
 }
 
 body {
+  max-width: 1920px;
+  min-width: 320px;
   line-height: $mainLineHeight;
   color: $mainFontColor;
   margin: 0;
@@ -29,6 +31,7 @@ body {
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 *, *:before, *:after { box-sizing: border-box; }
@@ -77,30 +80,33 @@ ul, li {
 //   min-height: 100vh;
 // }
 
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.container {
+.page-wrapper {
+  margin: 0 auto;
   width: 100%;
-  flex: 0 0 auto;
   position: relative;
   margin: 0 auto;
-  max-width: $desktopWidth;
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: tableWidth;
-  }
-  @media screen and (max-width: $tableWidth) {
-    max-width: phoneWidth;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    max-width: smPhoneWidth;
-  }
+  flex: 0 0 auto;
+  max-width: $layoutWidth;
 }
 
+// .container {
+//   width: 100%;
+//   flex: 0 0 auto;
+//   position: relative;
+//   margin: 0 auto;
+//   max-width: $desktopWidth;
+//   @media screen and (max-width: $smDesktopWidth) {
+//     max-width: tableWidth;
+//   }
+//   @media screen and (max-width: $tableWidth) {
+//     max-width: phoneWidth;
+//   }
+//   @media screen and (max-width: $phoneWidth) {
+//     max-width: smPhoneWidth;
+//   }
+// }
+
 // Modules
- @import "../components/headerUI/headerUI.scss";
+ @import  "../components/UI-Kit/color_type/color_type.scss";
 
 

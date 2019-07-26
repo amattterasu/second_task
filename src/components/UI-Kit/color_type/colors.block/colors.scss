@@ -1,0 +1,72 @@
+%color-name-template {
+    font-size: 19px;
+    line-height: 29px;
+    color: $dark-shade-100;
+}
+
+%rect-template {
+    padding: 35px;
+    height: 70px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    border-radius: 6px;
+}
+
+@media only screen and (max-width: 419px) {
+    %rect-template { 
+        padding: 35px;
+        height: 70px;
+        margin-bottom: 0;
+        margin-top: 20px;
+        margin-right: 40px;
+        border-radius: 6px; 
+    }
+}
+
+.block {
+    display: flex;
+    flex-wrap: wrap;
+    
+    // styles for rect
+    &__rect100 {
+        @extend %rect-template;
+        background-color: $dark-shade-100;
+    }
+    &__rect75 {
+        @extend %rect-template;
+        background-color: $dark-shade-75;
+    }
+    &__rect50 {
+        @extend %rect-template;
+        background-color: $dark-shade-50;
+    }
+    &__rect25 {
+        @extend %rect-template;
+        background-color: $dark-shade-25;
+    }
+    &__rect5 {
+        @extend %rect-template;
+        background-color: $dark-shade-5;
+    }
+    &__rect-purple {
+        @extend %rect-template;
+        background-color: $purple;
+    }
+    &__rect-green {
+        @extend %rect-template;
+        background-color: $green;
+    }
+    
+    // styles for color names
+    &__name {
+        font-family: $boldFont;
+        margin-top: 7px;
+        @extend %color-name-template;
+    }
+
+    &__id {
+        font-family: $regularFont;
+        @extend %color-name-template;
+    }
+}
+
