@@ -1,5 +1,5 @@
 // JS
-//import './js/'
+import './components/UI-Kit/color_type/color_type.js'
 
 // SCSS
 import './global/main.scss'
