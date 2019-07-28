@@ -1,8 +1,7 @@
-// JS
-import './components/UI-Kit/color_type/color_type.js'
-
 // SCSS
 import './global/main.scss'
+// JS
+import './components/UI-Kit/color_type/color_type.js'
 
 // CSS (example)
 // import './assets/css/main.css'

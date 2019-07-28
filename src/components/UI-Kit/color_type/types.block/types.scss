@@ -1,4 +1,17 @@
-.types{
+@media only screen and (max-width: 501px) { 
+    .types .block-name { 
+        .h1, 
+        .h2 {
+            @include block_name-mb(110px);
+        }
+        .h3, 
+        .body {
+            @include block_name-mb(110px);
+        }
+    }
+}
+
+.types {
     display: flex;
 
     .block-name {
