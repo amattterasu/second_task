@@ -16,7 +16,10 @@
         margin-right: 192px;
     }
 
-    @media screen and (max-width: 1011px) {
+    @media screen and (max-width: 1180px) {
+        .content-wrapper {
+            justify-content: space-around;
+        }
         .item:first-child, .item:last-child {
             margin: 50px 50px;
         }

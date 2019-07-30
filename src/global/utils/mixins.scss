@@ -28,12 +28,8 @@
   font-family: $font;
 }
 
-@mixin block-name ($size, $height, $mb) {
+@mixin block-title ($size, $height, $mb) {
   font-size: $size;
   line-height: $height;
-  margin-bottom: $mb;
-
-}
-@mixin block_name-mb ( $mb) {
   margin-bottom: $mb;
 }

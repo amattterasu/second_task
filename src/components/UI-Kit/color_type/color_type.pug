@@ -1,7 +1,22 @@
+include ./colors.block/colors.pug
+include ./types.block/types.pug
+
 .page-wrapper
   include ../headerUI/headerUI.pug
   .content-wrapper
     .item 
-      include ./colors.block/colors.pug
+      +blockColor('Dark Shade 100%', '#1F2041', '100')
+      +blockColor('Dark Shade 75%', '#1F2041', '75')
+      +blockColor('Dark Shade 50%', '#1F2041', '50')
+      +blockColor('Dark Shade 25%', '#1F2041', '25')
+      +blockColor('Dark Shade 5%', '#1F2041', '5')
+      +blockColor('Purple', '#BC9CFF', '-purple')
+      +blockColor('Green', '#6FCF97', '-green')
     .item
-      include ./types.block/types.pug
+      +blockType('H1' ,'1', 'h1')
+      +blockType('H2' ,'2','h2')
+      +blockType('H3' ,'3', 'h3')
+      +blockType('Body' ,'body', 'body')
+      
+    
+    

@@ -1,44 +1,44 @@
-@media only screen and (max-width: 501px) { 
-    .types .block-name { 
-        .h1, 
-        .h2 {
-            @include block_name-mb(110px);
+@media only screen and (max-width: 493px) { 
+    .blockType {
+    
+        flex-direction: column; 
+        align-items: center;
+
+        &__text { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
         }
-        .h3, 
-        .body {
-            @include block_name-mb(110px);
+
+        &__title {
+            margin: 0 0 20px 0;
         }
     }
 }
 
-.types {
+.blockType {
     display: flex;
-
-    .block-name {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+    flex-wrap: wrap;
+    
+    &__title {
         margin-right: 30px;
-        
-        .h1 {
-            color: $dark-shade-25;
-            @include block-name (24px, 29px, 80px);
+        color: $dark-shade-25;
+
+        &-1 { 
+            @include block-title (24px, 29px, 80px);
         }
-        .h2 {
-            color: $dark-shade-25;
-            @include block-name (19px, 23px, 74px);
+        &-2 { 
+            margin-left: 2px;
+            @include block-title (19px, 23px, 76px);
+
         }
-        .h3 {
-            color: $dark-shade-25;
-            @include block-name (12px, 15px, 50px);
+        &-3 { 
+            margin-left: 12px;
+            @include block-title (12px, 15px, 48px);
         }
-        .body {
-            color: $dark-shade-25;
+        &-body { 
+            margin-left: -9px;
         }
     }
-    .block-text {
-        .p {
-            margin-bottom: 49px;
-        }
-    } 
 }
