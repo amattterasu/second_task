@@ -1,9 +1,9 @@
+const webpack = require('webpack')
 const path = require('path')
 const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { VueLoaderPlugin } = require('vue-loader')
 
 const PATHS = {
     src: path.join(__dirname, '../src'),
@@ -53,15 +53,6 @@ module.exports = {
                 exclude: '/node_modules/'
             },
             {
-                test: /\.vue$/,
-                loader: 'vue-loader',
-                options: {
-                    loader: {
-                        scss: 'vue-style-loader!css-loader!sass-loader'
-                    }
-                }
-            },
-            {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'file-loader',
                 options: {
@@ -107,16 +98,13 @@ module.exports = {
                 ]
             }]
     },
-    resolve: {
-        alias: {
-            '~': PATHS.src,
-            'vue$': 'vue/dist/vue.js',
-        }
-    },
     plugins: [
-        new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
             filename: `${PATHS.assets}css/[name].[hash].css`,
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
         }),
         new CopyWebpackPlugin([
             { from: `${PATHS.src}/${PATHS.assets}/img`, to: `${PATHS.assets}img` },
