@@ -19,7 +19,7 @@
   :-moz-placeholder           {@content}
   ::-moz-placeholder          {@content}
   :-ms-input-placeholder      {@content}
-}
+};
 
 @mixin template-h ($size, $height, $color, $font) {
   font-size: $size;

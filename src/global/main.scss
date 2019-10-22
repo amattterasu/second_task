@@ -5,8 +5,6 @@
 @import "utils/reset";
 
 html {
-  //line-height: $mainLineHeight;
-  font-size: $mainFontSize;
   box-sizing: border-box;
 }
 
@@ -51,55 +49,8 @@ ul, li {
   list-style-type: none;
 }
 
-.page-wrapper {
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-  flex: 0 0 auto;
-  max-width: $layoutWidth;
-}
-
-// section, .section {
-//   position: relative;
-//   padding: 40px 0;
-//   @media screen and (max-width: $desktopWidth) {
-//     padding: 36px 0;
-//   }
-//   @media screen and (max-width: $desktopWidth) {
-//     padding: 28px 0;
-//   }
-//   @media screen and (max-width: $desktopWidth) {
-//     padding: 20px 0;
-//   }
-// }
-
-// .wrapper {
-//   display: flex;
-//   flex-direction: column;
-//   margin: 0 auto;
-//   min-height: 100vh;
-// }
-
-
-// .container {
-  //   width: 100%;
-  //   flex: 0 0 auto;
-  //   position: relative;
-  //   margin: 0 auto;
-  //   max-width: $desktopWidth;
-  //   @media screen and (max-width: $smDesktopWidth) {
-//     max-width: tableWidth;
-//   }
-//   @media screen and (max-width: $tableWidth) {
-//     max-width: phoneWidth;
-//   }
-//   @media screen and (max-width: $phoneWidth) {
-//     max-width: smPhoneWidth;
-//   }
-// }
-
 // Modules
+@import '../pages/ui-kit/ui-kit.scss'
 
 
 
