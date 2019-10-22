@@ -4,6 +4,7 @@ const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const $ = require('jquery')
 
 const PATHS = {
     src: path.join(__dirname, '../src'),
@@ -19,7 +20,7 @@ module.exports = {
         paths: PATHS
     },
     entry: {
-        app: PATHS.src,
+        index: `${PATHS.src}/pages/index.js`,
         // module: `${PATHS.src}/module.js`,
     },
     output: {
@@ -111,11 +112,16 @@ module.exports = {
             { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
             { from: `${PATHS.src}/static`, to: '' },
         ]),
-
         // Automatic creation any html pages (Don't forget to RERUN dev server)
         ...PAGES.map(page => new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/${page}`,
             filename: `./${page.replace(/\.pug/, '.html')}`,
-        }))
+        })),
+        // new page
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/ui-kit/ui-kit.pug`,
+            filename: './ui-kit/ui-kit.html',
+            inject: true
+          })
     ],
 }
