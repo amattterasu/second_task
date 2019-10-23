@@ -122,6 +122,11 @@ module.exports = {
             template: `${PAGES_DIR}/ui-kit/ui-kit.pug`,
             filename: './ui-kit/ui-kit.html',
             inject: true
-          })
+          }),
+        //   new HtmlWebpackPlugin({
+        //     template: `${PAGES_DIR}/ui-kit/ui-kit.pug`,
+        //     filename: './ui-kit/ui-kit.html',
+        //     inject: true
+        //   })
     ],
 }
