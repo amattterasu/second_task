@@ -1,0 +1,39 @@
+.h1 {
+  color: $dark-shade-100;
+  font: {
+    family: $quickRegularFont;
+    size: $h1-font-size;
+    weight: bold;
+  }
+  line-height: $h1-line-height;
+}
+
+.h2 {
+  color: $dark-shade-100;
+  font: {
+    family: $quickRegularFont;
+    size: $h2-font-size;
+    weight: bold;
+  }
+  line-height: $h2-line-height;
+}
+
+.h3 {
+  color: $dark-shade-100;
+  font: {
+    size: $h3-font-size;
+    weight: bold;
+  }
+  line-height: $h3-line-height;
+  text-transform: uppercase;
+}
+
+.text {
+  color: $dark-shade-75;
+  font: {
+    family: $mainFont;
+    size: $body-font-size;
+    weight: normal;
+  }
+  line-height: $body-line-height;
+}

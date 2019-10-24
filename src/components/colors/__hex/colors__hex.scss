@@ -1,0 +1,8 @@
+.colors__color-hex {
+  color: $dark-shade-100;
+  font: {
+    family: $quickRegularFont ;
+    size: 19px / $ref-rem;
+  }
+  line-height: #{ (34px / 19px) };
+}

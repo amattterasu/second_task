@@ -9,37 +9,15 @@ html {
 }
 
 body {
-  max-width: 1920px;
-  min-width: 320px;
-  min-height: 100vh;
-  line-height: $mainLineHeight;
-  color: $mainFontColor;
-  margin: 0;
-  padding: 0;
-  font-family: $mainFont;
-  font-size: $mainFontSize;
-  font-weight: $mainFontWeight;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: $min-width;
 }
 
 *, *:before, *:after { box-sizing: border-box; }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
-
-h1 {
-  @include template-h(24px, 30px, $dark-shade-100, $boldFont)
-}
-
-h2 {
-  @include template-h(19px, 24px, $dark-shade-100, $boldFont)
-}
-
-h3 {
-  @include template-h(12px, 15px, $dark-shade-100, $boldFontM);
-  text-transform: uppercase;
-}
 
 a { text-decoration: none; }
 

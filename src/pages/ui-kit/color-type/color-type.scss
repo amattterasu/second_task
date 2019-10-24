@@ -1,0 +1,25 @@
+@import '../../../components/colors/colors.scss';
+@import '../ui-kit.scss';
+
+.ui-wrapper {
+  $paddingTop: 37px / $ref-rem;
+  $paddingSide: 150px;
+
+  &__body {
+    background-color: #fff;
+  }
+
+  &__main {
+    column-gap: calc(100% - #{$paddingSide * 2 + 586px});
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    padding-left: percentage($paddingSide / $ref-width);
+    padding-right: percentage($paddingSide / $ref-width);
+    padding-top: $paddingTop;
+    row-gap: 50px;
+  }
+
+  &__grid-item {
+    margin: 0;
+    padding-left: 0;
+  }
+}

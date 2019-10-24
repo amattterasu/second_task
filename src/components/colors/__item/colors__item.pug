@@ -1,0 +1,7 @@
+include ../__plate/colors__plate.pug
+include ../__label/colors__label.pug
+
+mixin colors__item(name, hex)
+  li.color__item&attributes(attributes)
+    +colors__plate(name)
+    +colors__label(name, hex)

@@ -1,0 +1,18 @@
+include __item/colors__item.pug
+include __label/colors__label.pug
+include __plate/colors__plate.pug
+
+mixin colors
+  -
+     const colors = [
+      {name: 'Dark Shade 100%', hex: '#1F2041'},
+      {name: 'Dark Shade 75%', hex: '#1F2041'},
+      {name: 'Dark Shade 50%', hex: '#1F2041'},
+      {name: 'Dark Shade 25%', hex: '#1F2041'},
+      {name: 'Dark Shade 5%', hex: '#1F2041'},
+      {name: 'Purple', hex: '#BC9CFF'},
+      {name: 'Green', hex: '#6FCF97'}
+    ]
+  ul.colors&attributes(attributes)
+    each color in colors
+      +colors__item(color.name, color.code)

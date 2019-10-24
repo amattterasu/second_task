@@ -1,42 +1,17 @@
-extends ../../layout/template-base
-
+//logo
+include ../../components/colors/colors.pug
+doctype html
 block variables
-	- var title = 'UI-Kit';
 
-block content
-
-	.wrapper
-		include ../../components/just-logo/logo
-		.colors-fonts
-			.colors-fonts__colors
-				-
-					const colors =
-					[
-						{"name": "Dark shade 100%", "hex" : "#1f2041"},
-						{"name": "Dark shade 75%", "hex" : "#1f2041", "theme" : "75-transparency"},
-						{"name": "Dark shade 50%", "hex" : "#1f2041", "theme" : "50-transparency"},
-						{"name": "Dark shade 25%", "hex" : "#1f2041", "theme" : "25-transparency"},
-						{"name": "Dark shade 5%", "hex" : "#1f2041", "theme" : "5-transparency"},
-						{"name": "Purple", "hex" : "#bc9cff", "theme" : "purple"},
-						{"name": "Green", "hex" : "#6fcf97", "theme" : "green"}
-					]
-				each color in colors
-					- const className = "theme" in color ? `colors-fonts__color_theme_${color.theme}` : ""
-					p.colors-fonts__color(class= className)
-						span.colors-fonts__color-image
-						span.colors-fonts__color-name= color.name
-							span.colors-fonts__color-hex= color.hex
-			.colors-fonts__fonts
-				-
-					const fonts = 
-					[
-						{"name": "h1", "text": "This one is the sub-section or widget title", "theme": "h1"},
-						{"name": "h2", "text": "Next one is the item title inside widgets", "theme": "h2"},
-						{"name": "h3", "text": "This is a label or CTA text", "theme": "h3"},
-						{"name": "body", "text": "This is the body text which is used for most of the design, like paragraphs, lists, etc."}
-					]
-				each font in fonts
-					- const className = "theme" in font ? `colors-fonts__font_theme_${font.theme}` : ""
-					p.colors-fonts__font(class= className)
-						span.colors-fonts__font-type= font.name
-						span.colors-fonts__font-example= font.text
+html.ui-wrapper
+	head
+		meta(charset="utf-8")
+		title
+			block title
+				='UI-kit'
+	body(class='text ui-wrapper__body')
+		header.ui-wrapper__header
+			//logo
+		main(class='ui-wrapper__main')
+			block content
+			+colors()(class='ui-wrapper__grid-item')

@@ -1,74 +1,14 @@
-@import '../../components/just-logo/logo.scss';
+@import '../../components/text/text.scss';
+@import '../../components/colors/colors.scss';
 
-.wrapper {
-    position: relative;
-    box-sizing: border-box;
+.ui-wrapper {
 
-}
+  &__header {
+    margin: 0;
+    padding: 30px / $ref-rem;
+  }
 
-.colors-fonts {
-    $here: &;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    &__colors {
-        width: 30%;
-        margin: 50px 0 0 30px;
-    }
-
-    &__color {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0;
-    
-        + #{$here}__color {
-            margin-top: 1.4rem;
-          }
-      
-    
-        &-image {
-          min-width: 5rem;
-          height: 5rem;
-          background-color: $dark-shade-100;
-          border-radius: 6px;
-        }
-        
-        &-hex {
-          display: block;
-          font-weight: normal;
-          text-transform: uppercase;
-        }
-
-        &-name {
-          font-weight: bold;
-          color: $dark-shade-100;
-          text-transform: capitalize;
-        }
-    
-        &_theme_75-transparency #{$here}__color-image {
-          background-color: $dark-shade-75 ;
-        }
-    
-        &_theme_50-transparency #{$here}__color-image {
-          background-color: $dark-shade-50;
-        }
-    
-        &_theme_25-transparency #{$here}__color-image {
-          background-color: $dark-shade-25;
-        }
-    
-        &_theme_5-transparency #{$here}__color-image {
-          background-color: $dark-shade-5;
-        }
-    
-        &_theme_purple #{$here}__color-image {
-          background-color: $purple ;
-        }
-    
-        &_theme_green #{$here}__color-image {
-          background-color: $green;
-        }
-      }
+  &__main {
+    display: grid;
+  }
 }

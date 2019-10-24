@@ -1,8 +1,8 @@
 // Font
-$mainFont                : 'Montserrat-Regular', Arial;
-$boldFontM               : 'Montserrat-Bold', Arial;
-$boldFont                : 'Quicksand-Bold', Arial;
-$regularFont             : 'Quicksand-Regular', Arial;
+$mainFont                : 'Montserrat-Regular', sans-serif;
+$boldFontM               : 'Montserrat-Bold', sans-serif;
+$quickBoldFont           : 'Quicksand-Bold', sans-serif;
+$quickRegularFont        : 'Quicksand-Regular', sans-serif;
 
 //Color & Type
 $dark-shade-100          : rgba(31, 32, 65, 1);
@@ -14,22 +14,30 @@ $dark-shade-10           : rgba(31, 32, 65, 0.1);
 $dark-shade-5            : rgba(31, 32, 65, 0.05);
 $purple                  : #BC9CFF;
 $green                   : #6FCF97;
-
-$purple-color-100: rgba(188, 156, 255, 1);
-$purple-color-50: rgba(188, 156, 255, 0.5);
-$purple-color-25: rgba(188, 156, 255, 0.25);
+$purple-color-100        : rgba(188, 156, 255, 1);
+$purple-color-50         : rgba(188, 156, 255, 0.5);
+$purple-color-25         : rgba(188, 156, 255, 0.25);
 
 // size of fonts
 $mainFontColor           :$dark-shade-75; //#101010;
-$mainFontSize            : 14px;
 $mainFontWeight          : 400;
 $mainLineHeight          : 24px;
+$min-width               : 320px;
+$max-width               : 1920px;
+$ref-width               : 1440px;
+$ref-rem                 : 16px/rem;
+$ref-air                 : 140px;
+$min-air                 : 20px;
+$parent-width            : $ref-width - 2 * $ref-air;
 
-$layoutWidth             : 1440px;
-$smDesktopWidth          : 980px;
-$tableWidth              : 768px;
-$phoneWidth              : 480px;
-$smPhoneWidth            : 320px;
+$body-font-size: 14px / $ref-rem;
+$body-line-height: 24px / 14px;
+$h1-font-size: 24px / $ref-rem;
+$h1-line-height: 30px / 24px;
+$h2-font-size: 19px / $ref-rem;
+$h2-line-height: 24px / 19px;
+$h3-font-size: 12px / $ref-rem;
+$h3-line-height: 15px / 12px;
 
 // Main color
 $default-color           : #ffffff;
