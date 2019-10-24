@@ -1,7 +1,7 @@
 .colors__plate {
   border-radius: 6px;
-  height: 0px;
-  padding: 50%;
+  width: 70px;
+  height: 70px;
 }
 
 .colors__plate_color_dark-shade-100 {
@@ -15,6 +15,9 @@
 }
 .colors__plate_color_dark-shade-25 {
   background-color: $dark-shade-25;
+}
+.colors__plate_color_dark-shade-5 {
+  background-color: $dark-shade-5;
 }
 .colors__plate_color_purple {
   background-color: $purple;
