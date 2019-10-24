@@ -129,4 +129,9 @@ module.exports = {
         //     inject: true
         //   })
     ],
+    resolve: {
+        alias: {
+          blocksPath: path.resolve(__dirname, 'src/components')
+        }
+      } 
 }
