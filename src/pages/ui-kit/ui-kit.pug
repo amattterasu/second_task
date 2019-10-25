@@ -1,5 +1,6 @@
 include ../../components/logo-sign/logo-sign.pug
 include ../../components/colors/colors.pug
+include ../../components/fonts-example/fonts-example.pug
 
 doctype html
 block variables
@@ -16,3 +17,4 @@ html.ui-wrapper
 		main(class='ui-wrapper__main')
 			block content
 			+colors()(class='ui-wrapper__grid-item')
+			+fonts-example()(class='ui-wrapper__grid-item')
