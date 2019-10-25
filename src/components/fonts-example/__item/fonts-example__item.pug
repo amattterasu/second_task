@@ -1,0 +1,15 @@
+mixin fonts-example__item(label, text)
+	- 
+		const examples = {
+			'H1': 'h1',
+			'H2': 'h2',
+			'H3': 'h3',
+			'Body': ''
+		};
+
+	li.fonts-example__item
+		.fonts-example__label(class=examples[label])
+			=label
+		.fonts-example__text(class=examples[label])
+			=text
+		

@@ -1,0 +1,13 @@
+include __item/fonts-example__item.pug
+
+mixin fonts-example
+  ul.font-sample
+    -
+      const fontsAndContent = {
+        'H1': 'This one is the sub-section or widget title',
+        'H2': 'Next one is the item title inside widgets',
+        'H3': 'This is a label or cta text',
+        'Body': 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'
+      }
+    each text, label in fontsAndContent
+      +fonts-example__item(label, text)
