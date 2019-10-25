@@ -121,11 +121,11 @@ module.exports = {
             template: `${PAGES_DIR}/${page}`,
             filename: `./${page.replace(/\.pug/, '.html')}`,
         })),
-          new HtmlWebpackPlugin({
+        new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/ui-kit/ui-kit.pug`,
             filename: 'ui-kit.html',
             inject: true
-          })
+        })
     ],
     resolve: {
         alias: {
