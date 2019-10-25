@@ -1,4 +1,4 @@
-//logo
+include ../../components/logo-sign/logo-sign.pug
 include ../../components/colors/colors.pug
 
 doctype html
@@ -9,10 +9,10 @@ html.ui-wrapper
 		meta(charset="utf-8")
 		title
 			block title
-				='UI-kit'
+				='UI-Kit'
 	body(class='text ui-wrapper__body')
 		header.ui-wrapper__header
-			//logo
+			+logo-sign
 		main(class='ui-wrapper__main')
 			block content
 			+colors()(class='ui-wrapper__grid-item')

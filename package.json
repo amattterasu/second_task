@@ -2,7 +2,6 @@
   "name": "toxin",
   "version": "1.0.0",
   "description": "FSD 2nd task",
-  "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
     "build": "webpack --config ./build/webpack.build.conf.js"

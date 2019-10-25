@@ -21,6 +21,7 @@ module.exports = {
     },
     entry: {
         index: `${PATHS.src}/pages/index.js`,
+        test: `${PATHS.src}/pages/ui-kit/ui-kit.js`
         // module: `${PATHS.src}/module.js`,
     },
     output: {
@@ -45,6 +46,7 @@ module.exports = {
                 test: /\.pug$/,
                 loader: 'pug-loader',
                 options: {
+                    root: path.resolve(__dirname, 'src/components'),
                     pretty: true,
                 },
             },
@@ -62,6 +64,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
+                include: [path.resolve(__dirname, "src/components")],
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]'
@@ -97,7 +100,8 @@ module.exports = {
                         options: { sourceMap: true, config: { path: `./postcss.config.js` } }
                     }
                 ]
-            }]
+            }
+        ]
     },
     plugins: [
         new MiniCssExtractPlugin({
@@ -117,21 +121,16 @@ module.exports = {
             template: `${PAGES_DIR}/${page}`,
             filename: `./${page.replace(/\.pug/, '.html')}`,
         })),
-        // new page
-        new HtmlWebpackPlugin({
+          new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/ui-kit/ui-kit.pug`,
-            filename: './ui-kit/ui-kit.html',
+            filename: 'ui-kit.html',
             inject: true
-          }),
-        //   new HtmlWebpackPlugin({
-        //     template: `${PAGES_DIR}/ui-kit/ui-kit.pug`,
-        //     filename: './ui-kit/ui-kit.html',
-        //     inject: true
-        //   })
+          })
     ],
     resolve: {
         alias: {
-          blocksPath: path.resolve(__dirname, 'src/components')
+            blocksPath: path.resolve(__dirname, 'src/assets/img')
         }
-      } 
+    }
+
 }
