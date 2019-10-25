@@ -16,6 +16,7 @@
   }
 
   &__main {
+    height: 100vh;
     display: grid;
     column-gap: calc(100% - #{$paddingSide * 2 + 586px});
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
