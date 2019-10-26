@@ -1,0 +1,19 @@
+mixin header()
+
+  header.header
+    +logo-main()(class='header__main')
+
+    -
+      menu = [
+        {name: 'Home', current: true},
+        {name: 'About Us'},
+        {name: 'Services', selection: true},
+        {name: 'Careers'},
+        {name: 'News'},
+        {name: 'Documentation'}
+      ];
+
+      buttons = [
+        {content: {name: 'Login'}, type: 'border'},
+        {content: {name: 'Register'}, type: 'fill'}
+      ];
