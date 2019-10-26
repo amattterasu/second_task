@@ -2,9 +2,9 @@
 @import '../__label/colors__label.scss';
 
 .colors__item {
+  display: grid;
   align-items: center;
   column-gap: 40px / $ref-rem;
   grid-template-columns: #{ 70px / $ref-rem } 1fr;
   padding-bottom: 20px / $ref-rem;
-  display: grid;
 }

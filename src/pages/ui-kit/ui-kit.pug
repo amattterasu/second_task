@@ -1,4 +1,5 @@
 include ../../components/logo-sign/logo-sign.pug
+include ../../components/logo-main/logo-main.pug
 include ../../components/colors/colors.pug
 include ../../components/fonts-example/fonts-example.pug
 
@@ -13,8 +14,10 @@ html.ui-wrapper
 				='UI-Kit'
 	body(class='text ui-wrapper__body')
 		header.ui-wrapper__header
-			+logo-sign
+			+logo-main
 		main(class='ui-wrapper__main')
 			block content
 			+colors()(class='ui-wrapper__grid-item')
 			+fonts-example()(class='ui-wrapper__grid-item')
+			
+		
