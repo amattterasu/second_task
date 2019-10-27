@@ -1,0 +1,13 @@
+@import '_type_material/icon_type_material.scss';
+@import '../../global/utils/libs.scss';
+
+.icon {
+  display: inline-block;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_color_dark-50 {
+  color: $dark-shade-50;
+}

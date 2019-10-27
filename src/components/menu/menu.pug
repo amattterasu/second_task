@@ -2,6 +2,6 @@ include __item/menu__item.pug
 
 mixin menu(menu)
 
-  ul.menu(class=``)
+  ul.menu(class=``)&attributes(attributes)
     each item in menu
       +menu__item(item)

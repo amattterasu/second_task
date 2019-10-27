@@ -1,14 +1,17 @@
 include ../../menu-link/menu-link.pug
+include ../../icon/icon.pug
 
 mixin menu__item(item)
   li.menu__item(class=[item.current ? 'menu__item_current': '',
     item.selection ? 'menu__item_selection' : ''])
 
     if typeof item === 'string'
-      +link(item)(class='menu__link')
+      +menu-link(item)(class='menu__link')
     else if item.selection
       span.menu__item-name
-        +link(item.name, item.href)(class='menu__link')
+        +menu-link(item.name, item.href)(class='menu__link')
+      +icon('expand_more')(class='menu__icon')
     else
       span.menu__submenu-header()
-        +link(item.name, item.href)(class='menu__link')
+        +menu-link(item.name, item.href)(class='menu__link')
+        

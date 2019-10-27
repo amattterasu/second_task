@@ -1,4 +1,5 @@
 @import '../../menu-link/menu-link.scss';
+@import '../../icon/icon.scss';
 
 .menu__item {
   padding-right: 30px / $ref-rem;
@@ -7,10 +8,16 @@
 
   &_selection {
     margin-right: -12px / $ref-rem;
+    display: flex;
   }
 
   &_current {
     color: $dark-shade-75;
     font-family: $boldFontM;
   }
+}
+
+.menu__icon {
+  font-size: 24px / $ref-rem;
+  line-height: 1.1;
 }
