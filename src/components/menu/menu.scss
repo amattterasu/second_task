@@ -1,0 +1,11 @@
+@import '__item/menu__item.scss';
+
+.menu {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  color: $dark-shade-50;
+  margin-bottom: 0;
+  padding-left: 0;
+}

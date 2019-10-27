@@ -1,0 +1,25 @@
+@import '../../menu-link/menu-link.scss';
+
+.menu__item {
+  padding-right: 30px / $ref-rem;
+  font-family: $mainFont;
+  color: $dark-shade-50;
+
+  &_selection {
+    margin-right: -12px / $ref-rem;
+  }
+
+  &_active {
+    color: $dark-shade-75;
+    font-family: $boldFontM;
+  }
+}
+
+.menu__item_current {
+  color: $dark-shade-75;
+  font-family: $boldFontM;
+}
+
+.menu__item_selection {
+  margin-right: -12px / $ref-rem;
+}

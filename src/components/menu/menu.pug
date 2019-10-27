@@ -1,0 +1,7 @@
+include __item/menu__item.pug
+
+mixin menu(menu)
+
+  ul.menu(class=``)
+    each item in menu
+      +menu__item(item)

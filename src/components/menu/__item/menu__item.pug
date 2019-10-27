@@ -1,0 +1,14 @@
+include ../../menu-link/menu-link.pug
+
+mixin menu__item(item)
+  li.menu__item(class=[item.current ? 'menu__item_current': '',
+    item.selection ? 'menu__item_selection' : ''])
+
+    if typeof item === 'string'
+      +link(item)(class='menu__link')
+    else if item.selection
+      span.menu__item-name
+        +link(item.name, item.href)(class='menu__link')
+    else
+      span.menu__submenu-header(class=item.children ? 'h3' : '')
+        +link(item.name, item.href)(class='menu__link')
