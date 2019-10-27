@@ -9,17 +9,8 @@
     margin-right: -12px / $ref-rem;
   }
 
-  &_active {
+  &_current {
     color: $dark-shade-75;
     font-family: $boldFontM;
   }
-}
-
-.menu__item_current {
-  color: $dark-shade-75;
-  font-family: $boldFontM;
-}
-
-.menu__item_selection {
-  margin-right: -12px / $ref-rem;
 }

@@ -30,18 +30,19 @@ $ref-air                 : 140px;
 $min-air                 : 20px;
 $parent-width            : $ref-width - 2 * $ref-air;
 
-$body-font-size: 14px / $ref-rem;
-$body-line-height: 24px / 14px;
-$h1-font-size: 24px / $ref-rem;
-$h1-line-height: 30px / 24px;
-$h2-font-size: 19px / $ref-rem;
-$h2-line-height: 24px / 19px;
-$h3-font-size: 12px / $ref-rem;
-$h3-line-height: 15px / 12px;
+$body-font-size          : 14px / $ref-rem;
+$body-line-height        : 24px / 14px;
+$h1-font-size            : 24px / $ref-rem;
+$h1-line-height          : 30px / 24px;
+$h2-font-size            : 19px / $ref-rem;
+$h2-line-height          : 24px / 19px;
+$h3-font-size            : 12px / $ref-rem;
+$h3-line-height          : 15px / 12px;
 
 // Main color
 $default-color           : #ffffff;
 $primary-color           : #444ce0;
+$grey                    : #f4f4f6;
 $success-color           : #26de81;
 $danger-color            : #fc5c65;
 $warning-color           : #fed330;

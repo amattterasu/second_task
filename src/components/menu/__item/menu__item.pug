@@ -10,5 +10,5 @@ mixin menu__item(item)
       span.menu__item-name
         +link(item.name, item.href)(class='menu__link')
     else
-      span.menu__submenu-header(class=item.children ? 'h3' : '')
+      span.menu__submenu-header()
         +link(item.name, item.href)(class='menu__link')

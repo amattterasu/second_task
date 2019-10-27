@@ -1,0 +1,19 @@
+@import '../menu/menu.scss';
+@import '../logo-main/logo-main.scss';
+
+.header {
+  @include calc-air($min-air: 10px);
+  align-items: center;
+  background-color: $default-color;
+  box-shadow: 0px 10px 20px $dark-shade-5;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-items: end;
+  padding-top: 15px / $ref-rem;
+  padding-bottom: 15px / $ref-rem;
+
+  @media (max-width: 1120px) {
+    column-gap: 40px;
+    grid-template-columns: auto 1fr;
+  }
+}

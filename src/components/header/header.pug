@@ -1,3 +1,6 @@
+include ../logo-main/logo-main.pug
+include ../menu/menu.pug
+
 mixin header()
 
   header.header
@@ -17,3 +20,4 @@ mixin header()
         {content: {name: 'Login'}, type: 'border'},
         {content: {name: 'Register'}, type: 'fill'}
       ];
+    +menu(menu)(class='header__menu')
