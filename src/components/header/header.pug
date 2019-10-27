@@ -1,23 +1,27 @@
 include ../logo-main/logo-main.pug
 include ../menu/menu.pug
+include __join/header__join.pug
 
 mixin header()
 
-  header.header
-    +logo-main()(class='header__main')
+	header.header
+		+logo-main()(class='header__main')
 
-    -
-      menu = [
-        {name: 'Home', current: true},
-        {name: 'About Us'},
-        {name: 'Services', selection: true},
-        {name: 'Careers'},
-        {name: 'News'},
-        {name: 'Documentation'}
-      ];
+		-
+			options = options || {};
+			menu = options.menu || [
+				{name: 'Home', current: true},
+				{name: 'About Us'},
+				{name: 'Services', selection: true},
+				{name: 'Careers'},
+				{name: 'News'},
+				{name: 'Documentation'}
+			];
 
-      buttons = [
-        {content: {name: 'Login'}, type: 'border'},
-        {content: {name: 'Register'}, type: 'fill'}
-      ];
-    +menu(menu)(class='header__menu')
+			buttons = options.buttons || [
+				{content: {text: 'Login'}, type: 'none'},
+				{content: {text: 'Register'}, type: 'fill'}
+			];
+			user = options.user || null;
+		+menu(menu)(class='header__menu')
+		+header__join(user, buttons)

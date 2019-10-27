@@ -10,13 +10,12 @@
   $paddingSide: 150px;
 
   .colors-and-type {
+    height: 100%;
+
+
     &__header {
       margin: 0;
       padding: 30px / $ref-rem;
-    }
-  
-    &__body {
-      background-color: #fff;
     }
   
     &__main {
@@ -40,15 +39,13 @@
   }
 
   .headers-and-footers {
-    &__body {
-      background-color: $grey;
-    }
-    
-    &__main {
-      height: 100vh;
-    }
-    
+    background-color: $grey;
+    margin-bottom: 42px / $ref-rem;
+    height: 100%;
+
     &__header {
+      margin: 0;
+      padding: 30px / $ref-rem;
       margin-bottom: 42px / $ref-rem;
     }
   

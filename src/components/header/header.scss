@@ -1,5 +1,6 @@
 @import '../menu/menu.scss';
 @import '../logo-main/logo-main.scss';
+@import '__join/header__join.scss';
 
 .header {
   @include calc-air($min-air: 10px);
@@ -11,9 +12,29 @@
   justify-items: end;
   padding-top: 15px / $ref-rem;
   padding-bottom: 15px / $ref-rem;
+  
+  &__menu {
+    margin-top: 8px;
+    margin-left: 20px;
+  }
 
   @media (max-width: 1120px) {
     column-gap: 40px;
     grid-template-columns: auto 1fr;
   }
+
+  &__button {
+    margin-right: 18px / $ref-rem;
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
 }
