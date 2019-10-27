@@ -2,33 +2,57 @@
 @import '../../components/colors/colors.scss';
 @import '../../components/fonts-example/fonts-example.scss';
 @import '../../components/logo-main/logo-main.scss';
+@import '../../components/header/header.scss';
 
 .ui-wrapper {
   $paddingTop: 37px / $ref-rem;
   $paddingSide: 150px;
 
-  &__header {
-    margin: 0;
-    padding: 30px / $ref-rem;
+  .colors-and-type {
+    &__header {
+      margin: 0;
+      padding: 30px / $ref-rem;
+    }
+  
+    &__body {
+      background-color: #fff;
+    }
+  
+    &__main {
+      display: grid;
+      column-gap: calc(100% - #{$paddingSide * 2 + 586px});
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      padding-left: percentage($paddingSide / $ref-width);
+      padding-right: percentage($paddingSide / $ref-width);
+      padding-top: $paddingTop;
+      row-gap: 50px;
+    }
+  
+    &__grid-item {
+      margin: 0;
+      padding-left: 0;
+    }
+  
+    &__main-item {
+      margin-bottom: 40px / $ref-rem;
+    }
   }
 
-  &__body {
-    background-color: #fff;
-  }
-
-  &__main {
-    height: 100vh;
-    display: grid;
-    column-gap: calc(100% - #{$paddingSide * 2 + 586px});
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    padding-left: percentage($paddingSide / $ref-width);
-    padding-right: percentage($paddingSide / $ref-width);
-    padding-top: $paddingTop;
-    row-gap: 50px;
-  }
-
-  &__grid-item {
-    margin: 0;
-    padding-left: 0;
+  .headers-and-footers {
+    &__body {
+      background-color: $grey;
+    }
+    
+    &__main {
+      height: 100vh;
+    }
+    
+    &__header {
+      margin-bottom: 42px / $ref-rem;
+    }
+  
+    &__main-item {
+      margin-bottom: 40px / $ref-rem;
+    }
   }
 }

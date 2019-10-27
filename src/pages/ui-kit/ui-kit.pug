@@ -14,11 +14,18 @@ html.ui-wrapper
 			block title
 				='UI-Kit'
 	body(class='text ui-wrapper__body')
-		header.ui-wrapper__header
-			+logo-sign
-		main(class='ui-wrapper__main')
-			+colors()(class='ui-wrapper__grid-item')
-			+fonts-example()(class='ui-wrapper__grid-item')
-
+		.colors-and-type
+			header.colors-and-type__header
+				+logo-sign
+			main(class='colors-and-type__main')
+				+colors()(class='colors-and-type__grid-item')
+				+fonts-example()(class='colors-and-type__grid-item')
+		.headers-and-footers
+			header.headers-and-footers__header
+				+logo-sign
+			main(class='headers-and-footers__main')
+				+header()(class='headers-and-footers__main-item')
+				+header()(class='headers-and-footers__main-item')
+				+header()(class='headers-and-footers__main-item')
 			
 		
