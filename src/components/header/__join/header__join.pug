@@ -1,0 +1,10 @@
+include ../../button/button.pug
+
+mixin header__join(user, items)
+  - items = items || []
+  .header__join(class=user ? 'header__user-name' : 'header__buttons')
+    if user
+      =user
+    else
+      each item in items
+        +button(item.content, item.type, 'both')(class='header__button')

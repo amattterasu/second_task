@@ -1,0 +1,9 @@
+include ../icon/icon.pug
+
+mixin button(content, type='fill', size='both', disabled=false)
+
+  button.button.text(type='button', class=`button_type_${type} button_size_${size}`)&attributes(attributes)
+    if content
+      if content.text
+        span.button__text.h3(class= content.textColor ? `button__text_color_${content.textColor}` : '')
+          =content.text

@@ -1,0 +1,9 @@
+.button__text {
+  .button_type_none & {
+    color: $primary-color;
+  }
+
+  .button_type_fill & {
+    color: $default-color;
+  }
+}

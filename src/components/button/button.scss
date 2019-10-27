@@ -1,0 +1,41 @@
+@import '__text/button__text.scss';
+
+.button {
+  border-radius: 22px / $ref-rem;
+  outline: none;
+  position: relative;
+
+  &_type_text {
+    background: none;
+    border: none;
+  }
+
+  &_type_fill {
+    background: $primary-gradient;
+    border: none;
+  
+    &.button_focused,
+    &:hover,
+    &:focus {
+      background: $primary-gradient-50;
+    }
+  }
+
+  &_type_none {
+    background-image: $primary-gradient;
+    border: solid 2px transparent;
+    box-shadow: 0 50px/$ref-rem $default-color inset;
+  
+    &.button_focused,
+    &:hover,
+    &:focus {
+      background-image: $primary-gradient-50;
+    }
+  }
+
+  &_size_both {
+    height: 34px / $ref-rem;
+    padding-left: 19px / $ref-rem;
+    padding-right: 20px / $ref-rem;
+  }
+}
