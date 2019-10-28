@@ -43,6 +43,11 @@
     margin-bottom: 42px / $ref-rem;
     height: 100%;
 
+    &__main {
+      display: grid;
+      row-gap: 40px;
+    }
+
     &__header {
       margin: 0;
       padding: 30px / $ref-rem;
