@@ -13,16 +13,6 @@
   padding-top: 15px / $ref-rem;
   padding-bottom: 15px / $ref-rem;
   
-  &__menu {
-    margin-top: 8px;
-    margin-left: 20px;
-  }
-
-  @media (max-width: 1120px) {
-    column-gap: 40px;
-    grid-template-columns: auto 1fr;
-  }
-
   &__button {
     margin-right: 18px / $ref-rem;
   
@@ -37,4 +27,15 @@
     justify-content: flex-end;
   }
 
+  @media (max-width: 1110px) {
+    column-gap: 40px;
+    grid-template-columns: auto 1fr;
+    row-gap: 40px;
+    justify-items: start;
+  }
+
+  @media (max-width: 431px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
