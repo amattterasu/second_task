@@ -2,14 +2,14 @@ include ../logo-main/logo-main.pug
 include ../menu/menu.pug
 include __join/header__join.pug
 
-mixin header()
+mixin header(person)
 
 	header.header
 		+logo-main()(class='header__main')
-
 		-
-			options = options || {};
-			menu = options.menu || [
+			person = person || {};
+		
+			let menu = [
 				{name: 'Home', current: true},
 				{name: 'About Us'},
 				{name: 'Services', selection: true},
@@ -18,10 +18,10 @@ mixin header()
 				{name: 'Documentation'}
 			];
 
-			buttons = options.buttons || [
+			let buttons = [
 				{content: {text: 'Login'}, type: 'none'},
 				{content: {text: 'Register'}, type: 'fill'}
 			];
-			user = options.user || null;
+			let user = person.user;
 		+menu(menu)(class='header__menu')
 		+header__join(user, buttons)

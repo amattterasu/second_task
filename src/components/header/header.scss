@@ -1,6 +1,7 @@
 @import '../menu/menu.scss';
 @import '../logo-main/logo-main.scss';
 @import '__join/header__join.scss';
+@import '__user/header__user.scss';
 
 .header {
   @include calc-air($min-air: 10px);

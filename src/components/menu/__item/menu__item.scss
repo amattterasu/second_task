@@ -5,6 +5,8 @@
   padding-right: 30px / $ref-rem;
   font-family: $mainFont;
   color: $dark-shade-50;
+  margin-left: -1.3px;
+  margin-top: 4px;
 
   &_selection {
     margin-right: -12px / $ref-rem;
@@ -20,4 +22,8 @@
 .menu__icon {
   font-size: 24px / $ref-rem;
   line-height: 1.1;
+}
+
+.menu__link {
+  color: inherit;
 }
