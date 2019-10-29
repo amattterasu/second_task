@@ -8,6 +8,10 @@
   margin-left: -1.3px;
   margin-top: 4px;
 
+  .menu_type_col & {
+    flex: 1;
+  }
+
   &_selection {
     margin-right: -12px / $ref-rem;
     display: flex;

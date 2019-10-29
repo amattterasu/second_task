@@ -1,7 +1,7 @@
 include ../../menu-link/menu-link.pug
 include ../../icon/icon.pug
 
-mixin menu__item(item)
+mixin menu__item(item, state)
   li.menu__item(class=[item.current ? 'menu__item_current': '',
     item.selection ? 'menu__item_selection' : ''])
 
@@ -12,6 +12,8 @@ mixin menu__item(item)
         +menu-link(item.name, item.href)(class='menu__link')
       +icon('expand_more')(class='menu__icon')
     else
-      span.menu__submenu-header()
+      span.menu__submenu-header(class=item.child ? 'h3' : '')
         +menu-link(item.name, item.href)(class='menu__link')
-        
+
+      if item.child && item.child.length
+        +menu(item.child, 'row', ++state)

@@ -1,7 +1,7 @@
 include __item/menu__item.pug
 
-mixin menu(menu)
+mixin menu(menu, type='row', state=0)
 
-  ul.menu(class=``)&attributes(attributes)
+  ul.menu(class=`menu_state_${state} menu_type_${type}`)
     each item in menu
-      +menu__item(item)
+      +menu__item(item, state)
