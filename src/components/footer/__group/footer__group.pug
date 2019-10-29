@@ -1,0 +1,21 @@
+include ../../menu/menu.pug
+
+mixin footer__group()
+
+  .footer__group
+    -
+      let menu =  [
+        {
+          name: 'Navigation',
+          child: ['About Us', 'News', 'Support', 'Products']
+        },
+        {
+          name: 'About Us',
+          child: ['Who we are', 'Our team', 'Careers', 'Investors']
+        },
+        {
+          name: 'Support',
+          child: ['Documentation', 'Community', 'Get in Touch']
+        }
+      ];
+    +menu(menu, 'col')(class='footer__menu')
