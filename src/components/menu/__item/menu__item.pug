@@ -14,6 +14,5 @@ mixin menu__item(item, state)
     else
       span.menu__submenu-header(class=item.child ? 'h3' : '')
         +menu-link(item.name, item.href)(class='menu__link')
-
       if item.child && item.child.length
         +menu(item.child, 'row', ++state)
